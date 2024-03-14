@@ -82,17 +82,16 @@ WSGI_APPLICATION = 'taskmate.wsgi.application'
 #    }
 #}
 
-#DATABASES = {
-    #'default': {
-        #'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': env('DJANGO_DB_NAME'),
-       # 'USER': env('DJANGO_DB_USER'),
-       # 'PASSWORD': env('DJANGO_DB_PASSWORD'),
-       # 'HOST': env('DJANGO_DB_HOST'),
-      #  'PORT': env('DJANGO_DB_PORT'),
-      #  }
-         
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('DJANGO_DB_NAME'),
+        'USER': env('DJANGO_DB_USER'),
+        'PASSWORD': env('DJANGO_DB_PASSWORD'),
+        'HOST': env('DJANGO_DB_HOST'),
+        'PORT': env('DJANGO_DB_PORT'),
+    }     
+}
 
 DATABASES = {
     'default': dj_database_url.parse(env('DATABASE_URL')),
